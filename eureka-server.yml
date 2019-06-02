@@ -1,4 +1,4 @@
-cspring:
+spring:
   application:
     name: eureka-server
   profiles: default
@@ -16,7 +16,7 @@ eureka:
     waitTimeInMsWhenSyncEmpty: 0    #wait time for subsequent sync
 ---  
 spring:
-  profiles: primary
+  profiles: primario
 server:
   port: 8011 
 eureka:
@@ -26,7 +26,7 @@ eureka:
 
 ---
 spring:
-  profiles: secondary
+  profiles: secundario
 server:
   port: 8012 
 eureka:
@@ -36,7 +36,7 @@ eureka:
       
 ---
 spring:
-  profiles: terceary
+  profiles: terciario
 server:
   port: 8013
 eureka:
