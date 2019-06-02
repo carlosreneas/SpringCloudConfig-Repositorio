@@ -10,8 +10,7 @@ eureka:
     fetch-registry: false
     service-url:
       defaultZone: http://localhost:8010/eureka/
-  server:
-    waitTimeInMsWhenSyncEmpty: 0    #wait time for subsequent sync
+      
 ---  
 spring:
   profiles: primario
