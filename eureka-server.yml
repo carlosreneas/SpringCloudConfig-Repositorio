@@ -1,4 +1,4 @@
-spring:
+cspring:
   application:
     name: eureka-server
   profiles: default
@@ -36,7 +36,7 @@ eureka:
       
 ---
 spring:
-  profiles: secondary
+  profiles: terceary
 server:
   port: 8013
 eureka:
