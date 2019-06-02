@@ -1,6 +1,4 @@
 spring:
-  application:
-    name: eureka-server
   profiles: default
 server:
   port: 8010 
