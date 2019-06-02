@@ -1,3 +1,10 @@
 # HTTP Server
 server:
   port: 8081   # HTTP (Tomcat) port
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    hostname: localhost
+    nonSecurePort: 8081
