@@ -2,9 +2,12 @@
 server:
   port: 0   # HTTP (Tomcat) port
 
+#eureka:
+# instance:
+#  instanceId: ${spring.application.name}:${server.port} 
 eureka:
- instance:
-  instanceId: ${spring.application.name}:${server.port} 
+  instance:
+   instance-id: ${spring.cloud.client.hostname}:${spring.application.name}:${spring.application.instance_id:${random.value}}
  client:
   service-url:
     defaultZone: http://localhost:8011/eureka,http://localhost:8012/eureka,http://localhost:8013/eureka 
