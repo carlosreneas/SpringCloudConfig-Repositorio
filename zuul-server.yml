@@ -12,3 +12,13 @@ zuul:
       url: sample-service #which url the request will e mapped to
       stripPrefix: false  #if zuul should replace the "/sample/" segment
       sensitiveHeaders:
+#Eureka Instance ID
+eureka:
+ instance:
+  instanceId: ${spring.application.name}:${server.port} 
+ client:
+  registerWithEureka: true
+  fetchRegistry: true
+  service-url:
+    defaultZone: http://localhost:8011/eureka,http://localhost:8012/eureka,http://localhost:8013/eureka 
+    
