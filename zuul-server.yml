@@ -13,7 +13,7 @@ zuul:
       serviceId: SERVICE
       stripPrefix: false  #if zuul should replace the "/sample/" segment
       sensitiveHeaders:
-  estudiante-service: # Service to create as sample
+    estudiante-service: # Service to create as sample
       path: /estudiante/** #path that will be intercepted
 #      url: sample-service #which url the request will e mapped to
       serviceId: ESTUDIANTE
