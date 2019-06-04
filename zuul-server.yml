@@ -30,6 +30,9 @@ eureka:
     defaultZone: http://localhost:8011/eureka,http://localhost:8012/eureka,http://localhost:8013/eureka 
     
 hystrix:
+  enabled: true
+  metrics:
+    enabled: true
   command:
     service:
       execution:
@@ -39,6 +42,15 @@ hystrix:
     circuitBreaker:
       requestVolumeThreshold: 4
       errorThresholdPercentage: 50
+
+management:
+  endpoint:
+    web:
+      exposure:
+        include: *
+    hystrix:
+      stream:
+        enabled: true
 
 service:
   ribbon:
