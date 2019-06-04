@@ -2,6 +2,7 @@ server:
   port: 8765 #the default port used for zuul service
   
 zuul:
+  ignoredServices: '*'
   host:
     connect-timeout-millis: 20000
     socket-timeout-millis: 20000
@@ -27,4 +28,27 @@ eureka:
   fetchRegistry: true
   service-url:
     defaultZone: http://localhost:8011/eureka,http://localhost:8012/eureka,http://localhost:8013/eureka 
+    
+hystrix:
+  command:
+    service:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 20000
+    circuitBreaker:
+      requestVolumeThreshold: 4
+      errorThresholdPercentage: 50
+
+service:
+  ribbon:
+    ConnectTimeout: 1000
+    ReadTimeout: 2000
+    MaxTotalHttpConnections: 100
+    MaxConnectionsPerHost: 100
+    MaxAutoRetries: 0
+    MaxAutoRetriesNextServer: 2
+    ServerListRefreshInterval: 2000
+    OkToRetryOnAllOperations: true
+    retryableStatusCodes: 500,404
     
