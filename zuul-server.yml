@@ -16,7 +16,7 @@ zuul:
     estudiante-service: # Service to create as sample
       path: /estudiante/** #path that will be intercepted
 #      url: sample-service #which url the request will e mapped to
-      serviceId: ESTUDIANTE
+      serviceId: ESTUDIANTES
       stripPrefix: false  #if zuul should replace the "/sample/" segment
       sensitiveHeaders:
 #Eureka Instance ID
